@@ -1,0 +1,44 @@
+{% extends 'ProjektUserBundle::base.html.twig' %}
+
+{% block body -%}
+    <h1>Uprawniony</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Imie</th>
+                <td>{{ entity.imie }}</td>
+            </tr>
+            <tr>
+                <th>Nazwisko</th>
+                <td>{{ entity.nazwisko }}</td>
+            </tr>
+            <tr>
+                <th>Data urodzenia</th>
+                <td>{{ entity.dataurodzenia|date('d-m-Y') }}</td>
+            </tr>
+            <tr>
+                <th>E-mail</th>
+                <td>{{ entity.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('user') }}">
+            Wstecz (do listy)
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('user_edit', { 'id': entity.id }) }}">
+            Edytuj
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

@@ -1,0 +1,5 @@
+projekt_user:
+    resource: "@ProjektUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

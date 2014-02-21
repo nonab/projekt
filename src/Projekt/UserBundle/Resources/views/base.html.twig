@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}Panel admina (dosc prosty jak zreszta widac:){% endblock %}</title>
+<style>
+ul
+{
+    list-style-type: none;margin:0;padding:0;
+
+}
+</style>
+
+    </head>
+    <body>
+        <h1>Siema szefie! Co robimy?</h1>
+                    <a href="{{path('user')}}">Uzytkownicy</a> &nbsp
+                    <a href="{{path('permission')}}">Uprawnienia</a>
+
+{% block body %}{% endblock %}
+
+    </body>
+</html>
+
+

@@ -1,0 +1,15 @@
+{% extends 'ProjektUserBundle::base.html.twig' %}
+
+{% block body -%}
+    <h1>Dodawanie uprawnien</h1>
+
+    {{ form(form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('permission') }}">
+            Wstecz (do listy)
+        </a>
+    </li>
+</ul>
+{% endblock %}

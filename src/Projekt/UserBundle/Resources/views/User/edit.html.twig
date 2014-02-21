@@ -1,0 +1,16 @@
+{% extends 'ProjektUserBundle::base.html.twig' %}
+
+{% block body -%}
+    <h1>Edycja uprawnionego</h1>
+
+    {{ form(edit_form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('user') }}">
+            Wstecz (do listy)
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}
